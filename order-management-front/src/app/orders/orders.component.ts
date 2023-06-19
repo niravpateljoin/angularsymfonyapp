@@ -60,6 +60,9 @@ import axios from "axios";
               <button class="cancel-order" *ngIf="item.status !== 'cancelled'" (click)="cancelRequest(item.id)">Cancel Order</button>
             </td>
           </tr>
+        <tr *ngIf="pagedData.length == 0">
+          <td colspan="11">No records found</td>
+        </tr>
         </tbody>
       </table>
       <app-pagination
